@@ -11,8 +11,8 @@ alert(
       var minutes = Number(split[1]);
       var wholeTd = td.parentNode.parentNode.parentNode.parentNode;
       var isFriday = Array.from(wholeTd.parentNode.childNodes).indexOf(wholeTd) === 7;
-	var isThursday= Array.from(wholeTd.parentNode.childNodes).indexOf(wholeTd) === 6;
-      return (hours * 60) + minutes - (isFriday ? 0 : isThursday ? (8 * 60) : (9 * 60));
+      var isThursday = Array.from(wholeTd.parentNode.childNodes).indexOf(wholeTd) === 6;
+         return (hours * 60) + minutes - (isFriday ? 0 : (isThursday ? 8 * 60 :(9 * 60)));
     } else {
       return false;
     }
